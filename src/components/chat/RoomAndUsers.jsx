@@ -12,7 +12,7 @@ const RoomAndUsers = ({ socket }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(import.meta.env.VITE_USERS_URL)
+    fetch('https://chat-server-65qg.onrender.com/api/users')
       .then((response) => response.json())
       .then((data) => {
         const { users, rooms } = data;
